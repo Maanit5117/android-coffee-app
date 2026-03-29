@@ -12,10 +12,14 @@ import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.newcoffeeapp.R
+import com.example.newcoffeeapp.ui.theme.AccentGreen
+import com.example.newcoffeeapp.ui.theme.LightBrown
+import com.example.newcoffeeapp.ui.theme.StarbucksGreen
 
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
@@ -43,16 +47,17 @@ fun MyBottomNavBar(){
                     )
                 },
                 label = { Text(item.title) },
-                modifier = Modifier.size(50.dp),
+                modifier = Modifier.size(30.dp),
                 onClick = {},
                 selected = true,
                 alwaysShowLabel = false,
                 colors = NavigationBarItemDefaults.colors(
-                    selectedIconColor = MaterialTheme.colorScheme.primary,
-                    selectedTextColor = MaterialTheme.colorScheme.primary,
-                    unselectedIconColor = MaterialTheme.colorScheme.onSurface,
-                    unselectedTextColor = MaterialTheme.colorScheme.onSurface,
-                    indicatorColor = MaterialTheme.colorScheme.surface
+                    selectedIconColor = StarbucksGreen,
+                    selectedTextColor = StarbucksGreen,
+                    unselectedIconColor = Color.DarkGray,
+                    unselectedTextColor = Color.DarkGray,
+                    indicatorColor = MaterialTheme.colorScheme.surface,
+
                 )
             )
         }

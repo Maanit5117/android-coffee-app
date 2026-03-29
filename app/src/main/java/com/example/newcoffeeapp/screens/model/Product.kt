@@ -1,0 +1,11 @@
+package com.example.newcoffeeapp.screens.model
+
+import android.content.res.Resources
+
+data class Product(
+    val id: Int,
+    val name: String,
+    val description: String,
+    val price: Double,
+    val imageResources: Int
+)

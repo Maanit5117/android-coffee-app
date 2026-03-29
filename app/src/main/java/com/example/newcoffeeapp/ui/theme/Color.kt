@@ -18,3 +18,8 @@ val LightGray = Color(0xFFE1E1E1)
 val IvoryWhite = Color(0xFFF7F0EB)
 val LightBrown = Color(0xFFC67C4E)
 
+val StarbucksGreen = Color(0xFF00704A)
+val DarkGreen = Color(0xFF1E3932)
+val AccentGreen = Color(0xFF00A862)
+val LightMint = Color(0xFFD4E9E2)
+val SoftGreen = Color(0xFFA3D9C9)
