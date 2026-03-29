@@ -11,12 +11,14 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -49,7 +51,13 @@ fun ProductCard(
 
     Card (
         modifier = modifier.fillMaxWidth().padding(8.dp),
-        shape = RoundedCornerShape(16.dp)
+        shape = RoundedCornerShape(16.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = LightMint
+        ),
+        elevation =  CardDefaults.cardElevation(
+            defaultElevation = 8.dp
+        )
     ){
         Column(
             modifier = Modifier.padding(8.dp)
@@ -58,13 +66,22 @@ fun ProductCard(
                 modifier = Modifier.fillMaxWidth().height(160.dp)
             ){
                 Image(
-                    painter = painterResource(R.drawable.espresso),
+                    painter = painterResource(product.imageResources),
                     contentDescription = "espresso image",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize()
                         .clip(RoundedCornerShape(24.dp))
                 )
+
+                Box(
+                    modifier = Modifier.align(Alignment.TopEnd)
+                ){
+                    Icon(painter = painterResource(R.drawable.regular_outline_heart),
+                        contentDescription = "Favorite")
+                }
             }
+
+
 
             Spacer(modifier = Modifier.height(7.dp))
 
@@ -102,7 +119,7 @@ fun ProductCard(
                     modifier = Modifier.background(
                         color = LightMint,
                         shape = RoundedCornerShape(10.dp)
-                    ).padding(16.dp)) {
+                    ).padding(16.dp).size(40.dp)) {
                     Icon(imageVector = Icons.Default.Add,
                         contentDescription = "Add Button")
                 }
