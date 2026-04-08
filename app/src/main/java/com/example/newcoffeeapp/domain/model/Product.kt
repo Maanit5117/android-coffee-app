@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.screens.model
+package com.example.newcoffeeapp.domain.model
 
 import android.content.res.Resources
 

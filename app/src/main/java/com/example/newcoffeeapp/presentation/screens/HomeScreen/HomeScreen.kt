@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.screens.HomeScreen
+package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -14,9 +14,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowDropDown
 import androidx.compose.material.icons.filled.KeyboardArrowDown
-import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -31,10 +29,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newcoffeeapp.R
-import com.example.newcoffeeapp.screens.UI_Components.MyBottomNavBar
-import com.example.newcoffeeapp.screens.model.Product
-import com.example.newcoffeeapp.ui.theme.CreamBeige
-import com.example.newcoffeeapp.ui.theme.IvoryWhite
+import com.example.newcoffeeapp.presentation.screens.UI_Components.MyBottomNavBar
+import com.example.newcoffeeapp.domain.model.Product
+import com.example.newcoffeeapp.presentation.screens.theme.IvoryWhite
 
 @Composable
 @Preview(showBackground = true, showSystemUi = true)
@@ -100,7 +97,7 @@ fun HomeScreen(){
 
                 Spacer(modifier = Modifier.height(40.dp))
 
-                Image(painter = painterResource(com.example.newcoffeeapp.R.drawable.new_banner),
+                Image(painter = painterResource(R.drawable.new_banner),
                     contentDescription = "Banner",
                     modifier = Modifier
                         .clip(RoundedCornerShape(16.dp)).fillMaxWidth()

@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.screens.HomeScreen
+package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.padding

@@ -1,9 +1,7 @@
-package com.example.newcoffeeapp.screens.UI_Components
+package com.example.newcoffeeapp.presentation.screens.UI_Components
 
-import android.graphics.drawable.Icon
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
-import androidx.compose.material.icons.materialIcon
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -17,9 +15,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.newcoffeeapp.R
-import com.example.newcoffeeapp.ui.theme.AccentGreen
-import com.example.newcoffeeapp.ui.theme.LightBrown
-import com.example.newcoffeeapp.ui.theme.StarbucksGreen
+import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 
 @Composable
 @Preview(showBackground = true, showSystemUi = true)

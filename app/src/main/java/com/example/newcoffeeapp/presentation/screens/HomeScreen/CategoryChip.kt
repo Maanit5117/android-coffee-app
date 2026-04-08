@@ -1,10 +1,9 @@
-package com.example.newcoffeeapp.screens.HomeScreen
+package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -12,16 +11,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.newcoffeeapp.ui.theme.AccentGreen
-import com.example.newcoffeeapp.ui.theme.LightMint
-import com.example.newcoffeeapp.ui.theme.SoftGreen
-import com.example.newcoffeeapp.ui.theme.StarbucksGreen
-import org.w3c.dom.Text
+import com.example.newcoffeeapp.presentation.screens.theme.LightMint
+import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 
 @Composable
 

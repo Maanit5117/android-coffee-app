@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.screens.HomeScreen
+package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -9,9 +9,8 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.newcoffeeapp.screens.model.Product
+import com.example.newcoffeeapp.domain.model.Product
 
 @Composable
 

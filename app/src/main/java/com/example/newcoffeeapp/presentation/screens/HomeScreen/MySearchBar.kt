@@ -1,6 +1,5 @@
-package com.example.newcoffeeapp.screens.HomeScreen
+package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
-import android.R.attr.contentDescription
 import androidx.compose.foundation.background
 import com.example.newcoffeeapp.R
 import androidx.compose.foundation.layout.Row
@@ -27,10 +26,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.newcoffeeapp.ui.theme.CoffeeBrown
-import com.example.newcoffeeapp.ui.theme.IvoryWhite
-import com.example.newcoffeeapp.ui.theme.StarbucksGreen
-import kotlin.contracts.contract
+import com.example.newcoffeeapp.presentation.screens.theme.IvoryWhite
+import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 
 
 @Composable
