@@ -64,37 +64,7 @@ fun HomeScreen(){
             modifier = Modifier.fillMaxSize().padding(16.dp).padding(innerPadding)
         ) {
 
-            Text(text = "Location",
-                color = IvoryWhite,
-                fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
-            )
-            Spacer(modifier = Modifier.height(6.dp))
 
-            Row (){
-                Text(text = location,
-                    color = IvoryWhite)
-                Icon(imageVector = Icons.Default.KeyboardArrowDown,
-                    contentDescription = "Change Location",
-                    tint = IvoryWhite
-                )
-            }
-
-            Spacer(modifier = Modifier.height(30.dp))
-
-            MySearchBar()
-
-            Spacer(modifier = Modifier.height(40.dp))
-
-            Image(painter = painterResource(com.example.newcoffeeapp.R.drawable.new_banner),
-                contentDescription = "Banner",
-                modifier = Modifier
-                    .clip(RoundedCornerShape(16.dp)).fillMaxWidth()
-                )
-
-            Spacer(modifier = Modifier.height(16.dp))
-
-            HomeScreenCategories()
 
             // displaying products
             val products = listOf(
@@ -107,7 +77,40 @@ fun HomeScreen(){
                 Product(id = 7, "Iced Latte","Refreshing and Rich",11.99, R.drawable.icedlatte),
             )
 
-            ProductsGrid(products = products)
+            ProductsGrid(products = products){
+                Text(text = "Location",
+                    color = IvoryWhite,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold
+                )
+                Spacer(modifier = Modifier.height(6.dp))
+
+                Row (){
+                    Text(text = location,
+                        color = IvoryWhite)
+                    Icon(imageVector = Icons.Default.KeyboardArrowDown,
+                        contentDescription = "Change Location",
+                        tint = IvoryWhite
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(30.dp))
+
+                MySearchBar()
+
+                Spacer(modifier = Modifier.height(40.dp))
+
+                Image(painter = painterResource(com.example.newcoffeeapp.R.drawable.new_banner),
+                    contentDescription = "Banner",
+                    modifier = Modifier
+                        .clip(RoundedCornerShape(16.dp)).fillMaxWidth()
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                HomeScreenCategories()
+
+            }
         }
     }
 

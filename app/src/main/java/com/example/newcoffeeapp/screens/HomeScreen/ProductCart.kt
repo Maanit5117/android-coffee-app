@@ -37,6 +37,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.newcoffeeapp.R
 import com.example.newcoffeeapp.screens.model.Product
+import com.example.newcoffeeapp.ui.theme.LightGray
 import com.example.newcoffeeapp.ui.theme.LightMint
 import com.example.newcoffeeapp.ui.theme.StarbucksGreen
 import com.example.newcoffeeapp.ui.theme.Typography
@@ -64,6 +65,10 @@ fun ProductCard(
         ) {
             Box(
                 modifier = Modifier.fillMaxWidth().height(160.dp)
+                    .background(
+                        color = LightGray.copy(alpha = 0.8f),
+                        shape = RoundedCornerShape(8.dp)
+                    )
             ){
                 Image(
                     painter = painterResource(product.imageResources),
@@ -77,7 +82,9 @@ fun ProductCard(
                     modifier = Modifier.align(Alignment.TopEnd)
                 ){
                     Icon(painter = painterResource(R.drawable.regular_outline_heart),
-                        contentDescription = "Favorite")
+                        contentDescription = "Favorite",
+                        modifier= Modifier.size(34.dp),
+                        tint = StarbucksGreen)
                 }
             }
 

@@ -17,12 +17,17 @@ import com.example.newcoffeeapp.screens.model.Product
 
 
 fun ProductsGrid(
-    products: List<Product>
+    products: List<Product>,
+    topContent : @Composable () -> Unit = {}
 ){
 
     LazyColumn(
         modifier = Modifier.fillMaxSize().padding(8.dp)
     ) {
+
+        item {
+            topContent()
+        }
         items(
             products.chunked(2)
         ) { rowProducts ->
