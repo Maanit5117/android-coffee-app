@@ -12,11 +12,16 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.newcoffeeapp.presentation.screens.UI_Components.AppMessageDialogue
 import com.example.newcoffeeapp.presentation.screens.theme.IvoryWhite
 import com.example.newcoffeeapp.presentation.screens.theme.LightMint
 import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
@@ -25,6 +30,8 @@ import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 @Composable
 
 fun DetailsScreenBottomBar(){
+
+    var showCartDialogue by remember { mutableStateOf(false) }
 
     BottomAppBar(
         containerColor = Color.Transparent
@@ -49,7 +56,7 @@ fun DetailsScreenBottomBar(){
                 modifier = Modifier.width(120.dp)
             )
 
-            Button(onClick = {},
+            Button(onClick = {showCartDialogue= true},
                 modifier = Modifier.weight(1f).height(50.dp),
                 shape = RoundedCornerShape(16.dp),
                 colors = ButtonDefaults.buttonColors(
@@ -61,6 +68,13 @@ fun DetailsScreenBottomBar(){
                     fontSize = 18.sp,
                     fontWeight = FontWeight.SemiBold)
             }
+
+            AppMessageDialogue(
+                show = showCartDialogue,
+                title = "Added to cart",
+                message = "Item has been added to cart.",
+                onDismiss = {showCartDialogue= false}
+            )
         }
 
 

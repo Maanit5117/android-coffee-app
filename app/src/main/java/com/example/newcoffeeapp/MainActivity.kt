@@ -6,6 +6,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.newcoffeeapp.presentation.screens.HomeScreen.HomeScreen
 import com.example.newcoffeeapp.presentation.screens.details.DetailsScreen
+import com.example.newcoffeeapp.presentation.screens.navigation.NavGraph
 import com.example.newcoffeeapp.presentation.screens.theme.NewCoffeeAppTheme
 import com.example.newcoffeeapp.presentation.screens.welcomeScreen.WelcomeScreen
 
@@ -15,7 +16,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewCoffeeAppTheme {
-               DetailsScreen()
+                NavGraph()
                 }
             }
         }

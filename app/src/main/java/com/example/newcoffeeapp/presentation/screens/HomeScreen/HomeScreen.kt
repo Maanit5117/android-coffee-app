@@ -28,15 +28,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 import com.example.newcoffeeapp.R
 import com.example.newcoffeeapp.presentation.screens.UI_Components.MyBottomNavBar
 import com.example.newcoffeeapp.domain.model.Product
 import com.example.newcoffeeapp.presentation.screens.theme.IvoryWhite
 
 @Composable
-@Preview(showBackground = true, showSystemUi = true)
 
-fun HomeScreen(){
+
+fun HomeScreen(navController: NavController){
 
 
     val location = "New Delhi, 110087"

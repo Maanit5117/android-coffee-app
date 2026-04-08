@@ -1,5 +1,6 @@
 package com.example.newcoffeeapp.presentation.screens.details
 
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
@@ -20,8 +21,19 @@ fun DetailsScreen(){
         Product(id = 7, "Iced Latte","Refreshing and Rich",11.99, R.drawable.icedlatte),
     )
 
+    var selectedProduct = products.find { it.id == 1 }
+
     Scaffold(
         topBar = {DetailsScreenTopBar()},
         bottomBar = {DetailsScreenBottomBar()}
-    ){}
-}
+    ){
+        innerPadding ->
+
+//        LazyColumn {
+//            item{
+//                productDetailsContent(selectedProduct,innerPadding)
+//
+//            }
+        }
+    }
+
