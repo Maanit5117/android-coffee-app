@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -21,6 +22,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
@@ -33,6 +35,7 @@ import com.example.newcoffeeapp.R
 import com.example.newcoffeeapp.domain.model.Product
 import com.example.newcoffeeapp.presentation.screens.theme.IvoryWhite
 import com.example.newcoffeeapp.presentation.screens.theme.LightGray
+import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 
 @Composable
 
@@ -56,14 +59,19 @@ fun productDetailsContent(product: Product, innerpadding: PaddingValues){
             fontWeight = FontWeight.Bold,
             color = Color.Black)
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(17.dp))
 
-        Row {
+        Row (
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ){
             Text(text = "Ice / Hot",
                 fontSize = 16.sp,
-                color = LightGray,
+                color = StarbucksGreen,
                 fontWeight = FontWeight.Medium
             )
+
 
             Icon(painter = painterResource(R.drawable.default_bean),
                 contentDescription = "Coffee bean",
@@ -87,11 +95,11 @@ fun productDetailsContent(product: Product, innerpadding: PaddingValues){
 
         Text(text = product.description,
             fontSize = 16.sp,
-            color = LightGray,
+            color = StarbucksGreen,
             fontWeight = FontWeight.Medium
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Text(text = "Size",
             fontSize = 24.sp,
@@ -111,8 +119,8 @@ fun productDetailsContent(product: Product, innerpadding: PaddingValues){
                 SelectSizeChip(
                     sizeText = size,
                     selected = selectedSizeText == size,
-                    onClick = {selectedSizeText == size},
-                    Modifier.weight(1f)
+                    onClick = {selectedSizeText = size},
+                    Modifier
                         .height(46.dp)
                 )
             }

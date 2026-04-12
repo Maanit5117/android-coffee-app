@@ -3,7 +3,9 @@ package com.example.newcoffeeapp.presentation.screens.HomeScreen
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.IntrinsicSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
@@ -12,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.newcoffeeapp.presentation.screens.theme.LightMint
@@ -20,14 +23,18 @@ import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 @Composable
 
 
+
 fun CategoryChip(
     text: String,
     isSelected: Boolean,
     onSelected: () -> Unit
 ){
     Box(
-        modifier = Modifier.width(90.dp).height(30.dp).clip(RoundedCornerShape( 6.dp))
-            .clickable{onSelected()}.background( if (isSelected) StarbucksGreen else LightMint),
+        modifier = Modifier.height(48.dp)
+            .clip(RoundedCornerShape( 6.dp))
+            .clickable{onSelected()}
+            .background( if (isSelected) StarbucksGreen else LightMint)
+            .padding(horizontal = 20.dp),
         contentAlignment = Alignment.Center
     ){
         Text(text = text,

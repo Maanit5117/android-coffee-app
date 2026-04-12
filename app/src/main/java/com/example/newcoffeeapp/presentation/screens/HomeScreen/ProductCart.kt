@@ -2,6 +2,7 @@ package com.example.newcoffeeapp.presentation.screens.HomeScreen
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,8 +31,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.newcoffeeapp.R
 import com.example.newcoffeeapp.domain.model.Product
+import com.example.newcoffeeapp.presentation.screens.navigation.Routes
 import com.example.newcoffeeapp.presentation.screens.theme.LightGray
 import com.example.newcoffeeapp.presentation.screens.theme.LightMint
 import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
@@ -42,11 +45,13 @@ import com.example.newcoffeeapp.presentation.screens.theme.Typography
 
 fun ProductCard(
     product: Product,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    navController: NavController
 ){
 
     Card (
-        modifier = modifier.fillMaxWidth().padding(8.dp),
+        modifier = modifier.fillMaxWidth().padding(8.dp)
+            .clickable{navController.navigate(Routes.DetailsScreen(product.id))},
         shape = RoundedCornerShape(16.dp),
         colors = CardDefaults.cardColors(
             containerColor = LightMint

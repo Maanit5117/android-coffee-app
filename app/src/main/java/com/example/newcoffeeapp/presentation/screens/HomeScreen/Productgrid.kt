@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
 import com.example.newcoffeeapp.domain.model.Product
 
 @Composable
@@ -17,7 +18,8 @@ import com.example.newcoffeeapp.domain.model.Product
 
 fun ProductsGrid(
     products: List<Product>,
-    topContent : @Composable () -> Unit = {}
+    topContent : @Composable () -> Unit = {},
+    navController: NavController
 ){
 
     LazyColumn(
@@ -36,13 +38,15 @@ fun ProductsGrid(
             ){
                 ProductCard(
                     product = rowProducts[0],
-                    modifier = Modifier.weight(1f)
+                    modifier = Modifier.weight(1f),
+                    navController = navController
                 )
 
                 if (rowProducts.size==2){
                     ProductCard(
                         product = rowProducts[1],
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(1f),
+                        navController = navController
                     )
                 }else
                 {

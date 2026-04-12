@@ -26,15 +26,16 @@ import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 @Composable
 
 
-fun SelectSizeChip(sizeText: String, selected: Boolean, onClick: () -> Unit,modifier: Modifier){
+fun SelectSizeChip(sizeText: String, selected: Boolean, onClick: () -> Unit,modifier: Modifier= Modifier){
 
 
         Box(
             modifier = Modifier
+                .height(46.dp)
+                .width(100.dp)
                 .border(1.dp, color = LightMint, shape = RoundedCornerShape(12.dp))
                 .background( if(selected) StarbucksGreen else LightMint,
                     shape = RoundedCornerShape(12.dp))
-                .height(46.dp)
                 .clickable{onClick()},
             contentAlignment = Alignment.Center
         ){
