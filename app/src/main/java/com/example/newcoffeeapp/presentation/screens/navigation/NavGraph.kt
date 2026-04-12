@@ -1,20 +1,16 @@
 package com.example.newcoffeeapp.presentation.screens.navigation
 
-import android.app.FragmentManager
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavController
-import androidx.navigation.NavHost
 import androidx.navigation.compose.rememberNavController
 import com.example.newcoffeeapp.presentation.screens.welcomeScreen.WelcomeScreen
-import com.example.newcoffeeapp.welcomeScreen.WelcomeScreen
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
 import com.example.newcoffeeapp.presentation.screens.HomeScreen.HomeScreen
+import com.example.newcoffeeapp.presentation.screens.ProfileScreen.ProfileScreen
 import com.example.newcoffeeapp.presentation.screens.cartScreen.CartScreen
 import com.example.newcoffeeapp.presentation.screens.details.DetailsScreen
-import com.example.newcoffeeapp.presentation.screens.navigation.Routes
+import com.example.newcoffeeapp.presentation.screens.favourites.FavouriteScreen
 
 @Composable
 fun NavGraph() {
@@ -45,6 +41,14 @@ fun NavGraph() {
         }
         composable<Routes.CartScreen> {
             CartScreen(navController)
+        }
+
+        composable<Routes.FavouriteScreen> {
+            FavouriteScreen(navController)
+        }
+
+        composable<Routes.ProfileScreen> {
+            ProfileScreen(navController)
         }
     }
 }

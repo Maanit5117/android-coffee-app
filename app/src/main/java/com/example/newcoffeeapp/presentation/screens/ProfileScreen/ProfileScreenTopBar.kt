@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.presentation.screens.cartScreen
+package com.example.newcoffeeapp.presentation.screens.ProfileScreen
 
 
 import androidx.compose.foundation.clickable
@@ -26,16 +26,15 @@ import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 @Composable
 
 
-fun CartScreenTopBar(){
+fun ProfileScreenTopBar(){
 
 
     TopAppBar(
-        title = { Text("Order",
+        title = { Text("Profile",
             fontWeight = FontWeight.Bold,
             color = StarbucksGreen,
             fontSize = 30.sp,
             modifier = Modifier.fillMaxWidth(),
-            textAlign = TextAlign.Center
         ) },
 
 

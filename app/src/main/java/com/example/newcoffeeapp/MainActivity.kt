@@ -8,6 +8,7 @@ import androidx.navigation.NavController
 import com.example.newcoffeeapp.presentation.screens.HomeScreen.HomeScreen
 import com.example.newcoffeeapp.presentation.screens.cartScreen.CartScreen
 import com.example.newcoffeeapp.presentation.screens.details.DetailsScreen
+import com.example.newcoffeeapp.presentation.screens.favourites.FavouriteScreen
 import com.example.newcoffeeapp.presentation.screens.navigation.NavGraph
 import com.example.newcoffeeapp.presentation.screens.theme.NewCoffeeAppTheme
 import com.example.newcoffeeapp.presentation.screens.welcomeScreen.WelcomeScreen
@@ -18,7 +19,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             NewCoffeeAppTheme {
-                NavGraph()
+               NavGraph()
                 }
             }
         }

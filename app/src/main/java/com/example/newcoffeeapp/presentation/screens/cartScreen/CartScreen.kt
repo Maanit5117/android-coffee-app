@@ -51,7 +51,7 @@ fun CartScreen(navController: NavController){
         Product(id = 3, "Cappuccino", "With Chocolate", 8.99, R.drawable.cappuccino)
     )
     Scaffold(
-        topBar = {CartScreenTopBar(navController)},
+        topBar = {CartScreenTopBar()},
         bottomBar = { MyBottomNavBar(navController = navController, "Cart") }
     ) {innerPadding ->
         LazyColumn(

@@ -1,4 +1,4 @@
-package com.example.newcoffeeapp.presentation.screens.cartScreen
+package com.example.newcoffeeapp.presentation.screens.favourites
 
 
 import androidx.compose.foundation.clickable
@@ -26,11 +26,11 @@ import com.example.newcoffeeapp.presentation.screens.theme.StarbucksGreen
 @Composable
 
 
-fun CartScreenTopBar(){
+fun FavouriteScreenTopBar(){
 
 
     TopAppBar(
-        title = { Text("Order",
+        title = { Text("WishList",
             fontWeight = FontWeight.Bold,
             color = StarbucksGreen,
             fontSize = 30.sp,
